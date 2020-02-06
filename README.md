@@ -1,8 +1,6 @@
-# Attila
+# Pegasus
 
-A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost/). See a demo at: [attila.zutrinken.com](https://attila.zutrinken.com/)
-
-If you like this theme and want to support future development you can become a [financial contributor](https://paypal.me/zutrinken).
+A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost/), based on [Attila](https://github.com/zutrinken/attila).
 
 ## Screenshots
 
@@ -84,4 +82,8 @@ The compress Grunt task packages the theme files into `dist/<theme-name>.zip`, w
 
 ## Copyright & License
 
+### Pegasus
+Copyright (C) 2020 Christian Chomiak - Released under the [MIT License](https://github.com/christianchomiak/pegasus/blob/master/LICENSE).
+
+### Attila
 Copyright (C) 2015-2020 Peter Amende - Released under the [MIT License](https://github.com/zutrinken/attila/blob/master/LICENSE).
