@@ -9,13 +9,11 @@
 			{{#if @site.cover_image}}
 		</div>
 		<div class="blog-cover cover">
-			<img
-			srcset="{{img_url @site.cover_image size="s"}} 320w,
+			<img srcset="{{img_url @site.cover_image size="s"}} 320w,
               {{img_url @site.cover_image size="m"}} 640w,
               {{img_url @site.cover_image size="l"}} 960w,
-              {{img_url @site.cover_image size="xl"}} 1920w"
-      src="{{img_url @site.cover_image size="xl"}}"
-			alt="{{@site.title}}" />
+              {{img_url @site.cover_image size="xl"}} 1920w" src="{{img_url @site.cover_image size="xl"}}"
+				alt="{{@site.title}}" />
 		</div>
 		{{/if}}
 	</div>

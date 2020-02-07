@@ -16,6 +16,10 @@
 		</span>
 		<h1 class="post-title">{{{title}}}</h1>
 		<div class="post-meta">
+			<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time> &bull;
+			{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
+		</div>
+		<!--<div class="post-meta">
 			<div class="post-meta-avatars">
 				{{#foreach authors}}
 				<figure class="post-meta-avatar avatar">
@@ -30,7 +34,7 @@
 			<h4 class="post-meta-author">{{authors separator=", "}}</h4>
 			<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time> &bull;
 			{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
-		</div>
+		</div>-->
 		{{#if feature_image}}
 		<div class="post-cover cover">
 			<img srcset="{{img_url feature_image size="s"}} 320w,

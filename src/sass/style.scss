@@ -713,7 +713,7 @@ textarea {
    ========================================================================== */
 .blog-header {
 	position: relative;
-	padding-top: calc(16rem + 4vw);
+	padding-top: calc(4rem + 4vw);
 
 	&.has-cover {
 		padding-top: calc(24rem + 8vw);
@@ -732,7 +732,7 @@ textarea {
 		z-index: 10;
 		padding-bottom: calc(4rem + 2vw);
 		text-align: center;
-		border-bottom: 1px solid $color-border;
+		// border-bottom: 1px solid $color-border;
 		@media (prefers-color-scheme: no-preference) {
 			border-color: $color-border-dark;
 		}
@@ -803,7 +803,7 @@ textarea {
 	display: block;
 	margin-top: 1rem;
 	padding: 0;
-	font-size: 3em;
+	font-size: 2em;
 	line-height: 1.33334em;
 	color: $color-text-secondary;
 	@media (prefers-color-scheme: no-preference) {
@@ -1561,8 +1561,9 @@ textarea {
 	position: relative;
 
 	.post .post-box {
-		padding-top: calc(4rem + 2vw);
-		padding-bottom: calc(4rem + 2vw);
+		text-align: center;
+		padding-top: calc(1rem + 2vw);
+		padding-bottom: calc(1rem + 2vw);
 		border-bottom: 1px solid $color-border;
 		@media (prefers-color-scheme: no-preference) {
 			border-color: $color-border-dark;
@@ -1596,7 +1597,7 @@ textarea {
    ========================================================================== */
 .post-header {
 	position: relative;
-	padding: calc(16rem + 4vw) 0 calc(2rem + 2vw);
+	padding: calc(8rem + 4vw) 0 calc(2rem + 2vw);
 }
 
 .post-header.has-cover {
@@ -1711,7 +1712,7 @@ textarea {
 }
 
 .post-header .post-title {
-	margin: 0 0 4rem;
+	margin: 0 0 2rem;
 	font-size: 6em;
 	line-height: 1.25em;
 }
@@ -1722,7 +1723,7 @@ textarea {
 
 .post-meta {
 	font-weight: 400;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	line-height: 2rem;
 	color: $color-text-secondary;
 	@media (prefers-color-scheme: no-preference) {
