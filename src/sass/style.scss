@@ -18,20 +18,31 @@ html {
 	overflow-x: hidden;
 }
 
+::selection {
+	text-shadow: none;
+	background: $color-selection;
+	@media (prefers-color-scheme: no-preference) {
+		background: $color-selection-dark;
+	}
+}
+
 .menu-active body,
 html.menu-active {
 	overflow-y: hidden;
 }
 
 body {
-	font: 400 1em / 1.5em 'Fira Sans', sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	font-weight: 400;
 	color: $color-text-primary;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
 	background: #FFF;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		background: $color-background-dark;
 		color: $color-text-primary-dark;
 	}
@@ -67,9 +78,9 @@ textarea {
 		line-height: 1.25em;
 		margin: 0 0 4rem;
 		text-rendering: optimizeLegibility;
-		color: #000;
-		@media (prefers-color-scheme: dark) {
-			color: #FFF;
+		color: $color-text-primary; // #000;
+		@media (prefers-color-scheme: no-preference) {
+			color: $color-text-primary-dark;
 		}
 	}
 
@@ -107,13 +118,16 @@ textarea {
 	}
 
 	p {
-		font-family: 'Cardo', serif;
+		// TODO: Consider using `Georgia,Times,serif` instead.
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+		// font-family: 'Cardo', serif;
 		margin: 0 0 4rem;
 	}
 
 	ol,
 	ul {
-		font-family: 'Cardo', serif;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+		// font-family: 'Cardo', serif;
 		margin: 0 0 4rem;
 		padding-left: 2em;
 		box-sizing: border-box;
@@ -170,13 +184,14 @@ textarea {
 		padding: 0;
 		background: $color-border;
 		border: 0;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			background: $color-border-dark;
 		}
 	}
 
 	blockquote {
-		font-family: 'Cardo', serif;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+		// font-family: 'Cardo', serif;
 		margin: 0 0 4rem;
 		padding: 0.25em 1em;
 		-moz-box-sizing: border-box;
@@ -208,7 +223,7 @@ textarea {
 	b,
 	strong {
 		font-weight: 700;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			color: $color-neutral-80;
 		}
 	}
@@ -218,7 +233,8 @@ textarea {
 	}
 
 	dl {
-		font-family: 'Cardo', serif;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+		// font-family: 'Cardo', serif;
 		margin: 0 0 4rem;
 		padding-left: 30px;
 	}
@@ -261,7 +277,7 @@ textarea {
 		border: 1px solid $color-border;
 		top: -2px;
 		white-space: pre-wrap;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			background: $color-background-dark;
 			border-color: $color-border-dark;
 		}
@@ -277,7 +293,7 @@ textarea {
 		background: $color-background;
 		border: 1px solid $color-border;
 		box-sizing: border-box;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			background: $color-background-dark;
 			border-color: $color-border-dark;
 		}
@@ -299,7 +315,7 @@ textarea {
 		background: $color-background;
 		user-select: none;
 		-webkit-user-select: none;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			background: $color-background-dark;
 			border-color: $color-border-dark;
 		}
@@ -341,7 +357,7 @@ textarea {
 		background: $color-background;
 		border-radius: 4px;
 		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #FFF inset;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			background: $color-background-dark;
 			border-color: $color-border-dark;
 		}
@@ -354,7 +370,7 @@ textarea {
 		margin: 0 0 4rem;
 		border: 1px solid $color-border;
 		background: $color-background;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			border-color: $color-border-dark;
 			background: $color-background-dark;
 		}
@@ -366,7 +382,7 @@ textarea {
 			font-size: 0.75em;
 			line-height: 1.33334em;
 			border: 1px solid $color-border;
-			@media (prefers-color-scheme: dark) {
+			@media (prefers-color-scheme: no-preference) {
 				border-color: $color-border-dark;
 			}
 		}
@@ -413,21 +429,21 @@ textarea {
 			width: 8rem;
 			height: 1px;
 			background: $color-border;
-			@media (prefers-color-scheme: dark) {
+			@media (prefers-color-scheme: no-preference) {
 				background: $color-border-dark;
 			}
 		}
 
 		a {
 			box-shadow: inset 0 -1px 0 $color-border;
-			@media (prefers-color-scheme: dark) {
+			@media (prefers-color-scheme: no-preference) {
 				box-shadow: inset 0 -1px 0 $color-border-dark;
 			}
 
 			&:focus,
 			&:hover {
 				box-shadow: inset 0 -2px 0 $color-border;
-				@media (prefers-color-scheme: dark) {
+				@media (prefers-color-scheme: no-preference) {
 					box-shadow: inset 0 -2px 0 $color-border-dark;
 				}
 			}
@@ -523,7 +539,7 @@ textarea {
 		border: 1px solid $color-border;
 		box-shadow: none !important;
 		overflow: hidden;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			background: $color-background-dark;
 			border-color: $color-border-dark;
 		}
@@ -538,7 +554,7 @@ textarea {
 		justify-content: start;
 		padding: 1.5em;
 		color: $color-text-secondary;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			color: $color-text-secondary-dark;
 		}
 	}
@@ -549,7 +565,7 @@ textarea {
 		line-height: 1.66667em;
 		font-weight: 700;
 		letter-spacing: 0.5px;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			color: $color-text-primary-dark;
 		}
 	}
@@ -591,7 +607,7 @@ textarea {
 		font-weight: 400;
 		margin-top: 1em;
 		flex-wrap: wrap;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			color: $color-text-primary-dark;
 		}
 	}
@@ -656,7 +672,7 @@ textarea {
 	border: 2px solid $color-border;
 	background: $color-border;
 	box-sizing: border-box;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		border-color: $color-border-dark;
 		background: $color-border-dark;
 	}
@@ -673,7 +689,7 @@ textarea {
 		border-radius: 100%;
 		background: $color-background;
 		box-sizing: border-box;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			background: $color-background-dark;
 		}
 	}
@@ -717,7 +733,7 @@ textarea {
 		padding-bottom: calc(4rem + 2vw);
 		text-align: center;
 		border-bottom: 1px solid $color-border;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			border-color: $color-border-dark;
 		}
 	}
@@ -771,9 +787,9 @@ textarea {
 	font-size: 6em;
 	line-height: 1em;
 	text-decoration: none;
-	color: #000;
-	@media (prefers-color-scheme: dark) {
-		color: #FFF;
+	color: $color-text-primary; // #000;
+	@media (prefers-color-scheme: no-preference) {
+		color: $color-text-primary-dark;
 	}
 }
 
@@ -782,14 +798,15 @@ textarea {
 }
 
 .blog-description {
-	font-family: 'Cardo', serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	// font-family: 'Cardo', serif;
 	display: block;
 	margin-top: 1rem;
 	padding: 0;
 	font-size: 3em;
 	line-height: 1.33334em;
 	color: $color-text-secondary;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		color: $color-text-secondary-dark;
 	}
 }
@@ -805,7 +822,7 @@ textarea {
 	&.archive-box {
 		padding-bottom: calc(4rem + 2vw);
 		border-bottom: 1px solid $color-border;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			border-color: $color-border-dark;
 		}
 	}
@@ -841,9 +858,9 @@ textarea {
 		font-size: 4em;
 		line-height: 1em;
 		margin: 1rem 0;
-		color: #000;
-		@media (prefers-color-scheme: dark) {
-			color: #FFF;
+		color: $color-text-primary; // #000;
+		@media (prefers-color-scheme: no-preference) {
+			color: $color-text-primary-dark;
 		}
 	}
 
@@ -852,9 +869,10 @@ textarea {
 		font-size: 2em;
 		line-height: 1.5em;
 		margin: 1rem 0;
-		font-family: 'Cardo', serif;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+		// font-family: 'Cardo', serif;
 		color: $color-text-secondary;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			color: $color-text-secondary-dark;
 		}
 	}
@@ -976,7 +994,7 @@ textarea {
 	overflow-y: scroll;
 	background: $color-background;
 	display: none;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		background: $color-background-dark;
 	}
 	@media only screen and (max-width: $breakpoint-medium) {
@@ -984,7 +1002,7 @@ textarea {
 		transition: all ease-out 0.3s;
 		transform: translate3d(0,100%,0);
 		border-top: 1px solid $color-border;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			border-color: $color-border-dark;
 		}
 	}
@@ -1021,7 +1039,7 @@ textarea {
 		box-sizing: border-box;
 		box-shadow: none !important;
 		outline: 0 !important;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			border-color: $color-border-dark;
 			background: $color-background-dark;
 		}
@@ -1053,7 +1071,7 @@ textarea {
 	box-sizing: border-box;
 	cursor: pointer;
 	transition: all ease-out 0.1s;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		border-color: $color-neutral-60;
 	}
 
@@ -1069,7 +1087,7 @@ textarea {
 		border-radius: 2px;
 		background: $color-neutral-60;
 		transition: all ease-out 0.1s;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			background: $color-neutral-80;
 		}
 	}
@@ -1121,7 +1139,7 @@ textarea {
 	background: #000;
 	opacity: 0.2;
 	display: none;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		opacity: 0.4;
 	}
 }
@@ -1144,7 +1162,7 @@ textarea {
 	border-top: 1px solid transparent;
 	box-sizing: border-box;
 	transition: all linear 0.1s;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		color: $color-text-secondary-dark;
 	}
 	@media only screen and (max-width: $breakpoint-medium) {
@@ -1183,7 +1201,7 @@ textarea {
 		&:focus,
 		&:hover {
 			color: $color-text-primary;
-			@media (prefers-color-scheme: dark) {
+			@media (prefers-color-scheme: no-preference) {
 				color: $color-text-primary-dark;
 			}
 		}
@@ -1241,6 +1259,9 @@ textarea {
 			display: block;
 			width: auto;
 			height: 4rem;
+			@media (prefers-color-scheme: no-preference) {
+				filter: invert(1);
+			}
 		}
 	}
 }
@@ -1297,7 +1318,7 @@ textarea {
 		a {
 			color: $color-neutral-25;
 			font-weight: 500;
-			@media (prefers-color-scheme: dark) {
+			@media (prefers-color-scheme: no-preference) {
 				color: $color-neutral-90;
 			}
 			@media only screen and (max-width: $breakpoint-medium) {
@@ -1339,7 +1360,7 @@ textarea {
 		&:focus,
 		&:hover {
 			color: $color-neutral-25;
-			@media (prefers-color-scheme: dark) {
+			@media (prefers-color-scheme: no-preference) {
 				color: $color-neutral-90;
 			}
 			@media only screen and (max-width: $breakpoint-medium) {
@@ -1473,7 +1494,7 @@ textarea {
 	&.active a {
 		color: $color-neutral-25;
 		font-weight: 500;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			color: $color-neutral-90;
 		}
 	}
@@ -1492,7 +1513,7 @@ textarea {
 		&:focus,
 		&:hover {
 			color: $color-neutral-25;
-			@media (prefers-color-scheme: dark) {
+			@media (prefers-color-scheme: no-preference) {
 				color: $color-neutral-90;
 			}
 		}
@@ -1509,7 +1530,7 @@ textarea {
 	font-size: 1.5em;
 	line-height: 2rem;
 	color: $color-text-secondary;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		color: $color-text-secondary-dark;
 	}
 	@media only screen and (max-width: $breakpoint-medium) {
@@ -1523,7 +1544,7 @@ textarea {
 	font-size: 1.5em;
 	line-height: 2rem;
 	color: $color-text-secondary;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		color: $color-text-secondary-dark;
 	}
 
@@ -1543,14 +1564,14 @@ textarea {
 		padding-top: calc(4rem + 2vw);
 		padding-bottom: calc(4rem + 2vw);
 		border-bottom: 1px solid $color-border;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			border-color: $color-border-dark;
 		}
 	}
 
 	#results .post .post-box {
 		border-top: 1px solid $color-border;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			border-color: $color-border-dark;
 		}
 	}
@@ -1581,7 +1602,7 @@ textarea {
 .post-header.has-cover {
 	padding: calc(16rem + 8vw) 0 calc(4rem + 6vw);
 	margin-bottom: calc(4rem + 2vw);
-	background: #000;
+	background: $color-text-primary; // #000;
 	overflow: hidden;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
@@ -1677,9 +1698,9 @@ textarea {
 	line-height: 1.25em;
 	font-weight: 700;
 	text-indent: -1px;
-	color: #000;
-	@media (prefers-color-scheme: dark) {
-		color: #FFF;
+	color: $color-text-primary; // #000;
+	@media (prefers-color-scheme: no-preference) {
+		color: $color-text-primary-dark;
 	}
 
 	a {
@@ -1704,7 +1725,7 @@ textarea {
 	font-size: 1.5rem;
 	line-height: 2rem;
 	color: $color-text-secondary;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		color: $color-text-secondary-dark;
 	}
 
@@ -1739,7 +1760,7 @@ textarea {
 		width: 8rem;
 		height: 1px;
 		background: $color-border;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			background: $color-border-dark;
 		}
 	}
@@ -1773,7 +1794,7 @@ textarea {
 		color: $color-text-primary;
 		font-weight: 500;
 		margin: 0;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			color: $color-text-primary-dark;
 		}
 	}
@@ -1798,8 +1819,9 @@ textarea {
 
 .post-excerpt {
 	margin: 1em 0 0;
-	font-family: 'Cardo', serif;
-	font-size: 2em;
+	//font-family: 'Cardo', serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-size: 2em; // Consider changing it to 1.6em
 	line-height: 1.5em;
 }
 
@@ -1878,7 +1900,7 @@ textarea {
 	&:focus,
 	&:hover {
 		background-color: $color-neutral-15;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			background-color: $color-primary-active;
 		}
 	}
@@ -1958,14 +1980,14 @@ textarea {
 	border-top: 1px solid $color-border;
 	border-bottom: 1px solid $color-border;
 	box-sizing: border-box;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		border-color: $color-border-dark;
 	}
 
 	&.activated {
 		background: $color-background;
 		border: 1px solid $color-border;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			background: $color-background-dark;
 			border-color: $color-border-dark;
 		}
@@ -1986,7 +2008,7 @@ textarea {
 	cursor: pointer;
 	transition: all ease 0.2s;
 	border-radius: 2em;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		border-color: $color-neutral-60;
 		color: $color-neutral-80;
 	}
@@ -2070,7 +2092,7 @@ textarea {
 	margin-top: -1px;
 	border-top: 1px solid $color-border;
 	border-bottom: 1px solid $color-border;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		border-color: $color-border-dark;
 	}
 }
@@ -2084,7 +2106,7 @@ textarea {
 	top: 0;
 	background: $color-border;
 	z-index: 2;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		background: $color-border-dark;
 	}
 	@media only screen and (max-width: $breakpoint-medium) {
@@ -2153,7 +2175,7 @@ textarea {
 			margin-bottom: -1px;
 			background: $color-border;
 			z-index: 2;
-			@media (prefers-color-scheme: dark) {
+			@media (prefers-color-scheme: no-preference) {
 				background: $color-border-dark;
 			}
 		}
@@ -2171,7 +2193,7 @@ textarea {
 	text-align: center;
 	transition: all ease-out 0.2s;
 	color: $color-border;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		color: $color-border-dark;
 	}
 
@@ -2202,16 +2224,17 @@ textarea {
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	color: #000;
-	@media (prefers-color-scheme: dark) {
-		color: #FFF;
+	color: $color-text-primary; // #000;
+	@media (prefers-color-scheme: no-preference) {
+		color: $color-text-primary-dark;
 	}
 }
 
 .post-nav-excerpt {
 	height: 5rem;
 	margin: 0 0 1rem;
-	font-family: 'Cardo', serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	// font-family: 'Cardo', serif;
 	font-size: 1.75em;
 	line-height: 2.5rem;
 	display: -webkit-box;
@@ -2263,7 +2286,7 @@ textarea {
 	transition: all ease 0.2s;
 	border-radius: 4rem;
 	box-sizing: border-box;
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: no-preference) {
 		border-color: $color-neutral-60;
 		color: $color-neutral-80;
 	}
@@ -2332,7 +2355,7 @@ textarea {
 
 	.pagination-box {
 		border-bottom: 1px solid $color-border;
-		@media (prefers-color-scheme: dark) {
+		@media (prefers-color-scheme: no-preference) {
 			border-color: $color-border-dark;
 		}
 	}

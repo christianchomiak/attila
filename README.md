@@ -18,11 +18,15 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 ## Features
 
 * Responsive layout
-* Dark Mode
+* Dark Mode – In `style.scss`, replace `prefers-color-scheme: no-preference` with `prefers-color-scheme: dark`
 * Search
 * Post reading progress
 * Code highlight including line numbers
 * Disqus support
+
+## Backlog
+
+* Dark Mode toggle
 
 ## Localization
 
@@ -41,8 +45,8 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 
 ## Setup [Disqus](https://disqus.com/)
 
-1. Go to __Code injection__.  
-2. Add this to __Blog Header__:  
+1. Go to __Code injection__.
+2. Add this to __Blog Header__:
 ````
 <script>var disqus = 'YOUR_DISQUS_SHORTNAME';</script>
 ````
