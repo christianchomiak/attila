@@ -7,10 +7,10 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 <table>
 <tr>
 <td valign="top">
-<img src="https://raw.githubusercontent.com/zutrinken/attila/master/src/screenshot-desktop.jpg" />
+<img src="https://raw.githubusercontent.com/christianchomiak/pegasus/master/src/screenshot-desktop.jpg" />
 </td>
 <td valign="top">
-<img src="https://raw.githubusercontent.com/zutrinken/attila/master/src/screenshot-mobile.jpg" />
+<img src="https://raw.githubusercontent.com/christianchomiak/pegasus/master/src/screenshot-mobile.jpg" />
 </td>
 </tr>
 </table>
