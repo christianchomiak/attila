@@ -11,7 +11,7 @@
 		<span class="post-info">
 			<span class="post-type">{{t "Article"}}</span>
 			{{#if tags}}
-			<span class="post-count">{{primary_tag.name}}</span>
+			<span class="post-count">{{tags autolink="false" separator=" &bull; "}}</span>
 			{{/if}}
 		</span>
 		<h1 class="post-title">{{{title}}}</h1>
