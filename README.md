@@ -23,10 +23,11 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 * Post reading progress
 * Code highlight including line numbers
 * Disqus support
+* LaTeX support using [KaTeX](https://katex.org/)
 
 ## Backlog
 
-* Dark Mode toggle
+* Dark Mode toggling
 
 ## Localization
 
