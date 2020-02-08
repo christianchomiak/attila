@@ -18,12 +18,12 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 ## Features
 
 * Responsive layout
-* Dark Mode – In `style.scss`, replace `prefers-color-scheme: no-preference` with `prefers-color-scheme: dark`
 * Search
 * Post reading progress
-* Code highlight including line numbers
 * Disqus support
-* LaTeX support using [KaTeX](https://katex.org/)
+* Code highlight support – [Prism.js](https://prismjs.com/) v1.19.0
+* LaTeX support – [KaTeX](https://katex.org/) v0.11.1
+* Dark Mode – In `style.scss`, replace `prefers-color-scheme: no-preference` with `prefers-color-scheme: dark`
 
 ## Backlog
 

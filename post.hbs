@@ -150,10 +150,12 @@
 	$(document).ready(function () {
 		var viewport = $(window);
 		var post = $('.post-content');
+
 		// Responsive videos with fitVids
 		post.fitVids();
+
 		// Format code blocks and add line numbers
-		function codestyling() {
+		/*function codestyling() {
 			$('pre code').each(function (i, e) {
 				// Code highlight
 				hljs.highlightBlock(e);
@@ -173,7 +175,8 @@
 				}
 			});
 		}
-		codestyling();
+		codestyling();*/
+
 		// Reading progress bar on window top
 		function readingProgress() {
 			var postBottom = post.offset().top + post.height();
@@ -226,4 +229,73 @@
 		});*/
 	});
 </script>
+
+<!--PrismJS-->
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism-tomorrow.min.css">
+</link>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/prism.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/plugins/show-language/prism-show-language.min.js"></script>
+
+<!-- All individual PrismJS language files -->
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-csharp.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-bash.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-batch.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-c.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-clike.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-cmake.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-cpp.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-diff.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-glsl.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-gml.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-go.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-haskell.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-ini.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-json.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-json5.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-latex.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-lua.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-makefile.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-markdown.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-nginx.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-perl.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-python.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-regex.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-ruby.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-rust.min.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/components/prism-sql.min.js"></script>
+<!--prism-okaidia.min.css-->
+
 {{/contentFor}}
