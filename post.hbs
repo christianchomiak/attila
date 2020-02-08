@@ -38,9 +38,9 @@
 		{{#if feature_image}}
 		<div class="post-cover cover">
 			<img srcset="{{img_url feature_image size="s"}} 320w,
-              {{img_url feature_image size="m"}} 640w,
-              {{img_url feature_image size="l"}} 960w,
-              {{img_url feature_image size="xl"}} 1920w" src="{{img_url feature_image size="xl"}}" alt="{{title}}" />
+				{{img_url feature_image size="m"}} 640w,
+				{{img_url feature_image size="l"}} 960w,
+				{{img_url feature_image size="xl"}} 1920w" src="{{img_url feature_image size="xl"}}" alt="{{title}}" />
 		</div>
 		{{/if}}
 	</div>
@@ -55,7 +55,6 @@
 			</section>
 
 			<section class="post-footer">
-
 				<div class="post-share">
 					<span class="post-info-label">{{t "Share"}}</span>
 					<a title="Twitter" class="twitter"
@@ -94,9 +93,9 @@
 					<section class="post-nav-teaser">
 						<i class="icon icon-arrow-left"></i>
 						<h2 class="post-nav-title">{{title}}</h2>
-						<p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p>
+						<!--<p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p>
 						<p class="post-nav-meta"><time
-								datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time></p>
+								datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time></p>-->
 					</section>
 				</a>
 				{{/next_post}}
@@ -105,9 +104,9 @@
 					<section class="post-nav-teaser">
 						<i class="icon icon-arrow-right"></i>
 						<h2 class="post-nav-title">{{title}}</h2>
-						<p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p>
+						<!--<p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p>
 						<p class="post-nav-meta"><time
-								datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time></p>
+								datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time></p>-->
 					</section>
 				</a>
 				{{/prev_post}}
