@@ -115,7 +115,8 @@
 			</aside>
 
 			<section class="post-comments">
-				<a id="show-disqus" class="post-comments-activate">{{t "Show Comments"}}</a>
+				<!--Uncomment this to re-enable the loading of the comments at the readers's request.-->
+				<!--<a id="show-disqus" class="post-comments-activate">{{t "Show Comments"}}</a>-->
 				<div id="disqus_thread"></div>
 			</section>
 
@@ -183,6 +184,8 @@
 				readingProgress();
 			}
 		});
+
+		// Comment and uncomment the next bit to re-enable the loading of the comments at the readers's request.
 		// Check if disqus is defined by code injection
 		if (typeof disqus === 'undefined') {
 			// hide comment section
@@ -190,16 +193,26 @@
 				'display': 'none'
 			});
 		} else {
-			$('#show-disqus').on('click', function () {
-				$.ajax({
-					type: "GET",
-					url: "//" + disqus + ".disqus.com/embed.js",
-					dataType: "script",
-					cache: true
-				});
-				$(this).parent().addClass('activated');
-			});
+			var disqus_config = function () {
+				this.page.url = "{{url absolute="true"}}";
+				this.page.identifier = "ghost-{{comment_id}}"
+			};
+			(function () {
+				var d = document, s = d.createElement('script');
+				s.src = 'https://' + disqus + '.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
 		}
+		/*$('#show-disqus').on('click', function () {
+			$.ajax({
+				type: "GET",
+				url: "//" + disqus + ".disqus.com/embed.js",
+				dataType: "script",
+				cache: true
+			});
+			$(this).parent().addClass('activated');
+		});*/
 	});
 </script>
 {{/contentFor}}
