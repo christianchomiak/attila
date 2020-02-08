@@ -393,7 +393,7 @@ textarea {
 			letter-spacing: 1px;
 			font-size: 0.75em;
 			line-height: 1.33334em;
-			color: $color-text-secondary;
+			color: $color-text-primary;
 		}
 	}
 
@@ -713,7 +713,7 @@ textarea {
    ========================================================================== */
 .blog-header {
 	position: relative;
-	padding-top: calc(4rem + 4vw);
+	padding-top: calc(8rem + 4vw);
 
 	&.has-cover {
 		padding-top: calc(24rem + 8vw);
