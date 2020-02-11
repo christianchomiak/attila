@@ -43,6 +43,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 * __Russian__ by [schamberg97](https://github.com/schamberg97)
 * __Turkish__ by [cgrgrbz](https://github.com/cgrgrbz)
 * __Swedish__ by [martenj77](https://github.com/martenj77)
+* __Czech__ by [lunakv](https://github.com/lunakv)
 
 ## Setup [Disqus](https://disqus.com/)
 
