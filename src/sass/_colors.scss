@@ -9,6 +9,13 @@
   }
 }
 
+:root {
+  --color-primary: #D95736;
+  --color-primary-active: #BF4526;
+}
+$color-primary: var(--color-primary);
+$color-primary-active: var(--color-primary-active);
+
 $color-neutral-98: hsb(215, 1, 98);
 $color-neutral-90: hsb(215, 2, 90);
 $color-neutral-80: hsb(215, 4, 80); // nav, menu, pagination - button border
@@ -24,7 +31,7 @@ $color-primary: #3ea9dd; //hsb(12, 78, 88);
 $color-primary-active: #3ea9dd; // hsb(10, 84, 82);
 $color-text-primary: hsl(0, 0%, 27%); //$color-neutral-15;
 $color-text-primary-dark: $color-neutral-90;
-$color-text-secondary: $color-neutral-60;
+$color-text-secondary: hsb(215, 8, 49); // special value for accessibility
 $color-text-secondary-dark: $color-neutral-60;
 $color-border: $color-neutral-90;
 $color-background: $color-neutral-98;

@@ -47,6 +47,19 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 * __Portuguese__ by [matheusvanzan](https://github.com/matheusvanzan)
 * __Vietnamese__ by [JustHmmmm](https://github.com/justhmmmm)
 
+## Setup custom color
+
+1. Go to __Code injection__.  
+2. Add this to __Blog Header__:  
+````
+<style>
+  :root {
+    --color-primary: #D95736;
+    --color-primary-active: #BF4526;
+  }
+</style>
+````
+
 ## Setup [Disqus](https://disqus.com/)
 
 1. Go to __Code injection__.
