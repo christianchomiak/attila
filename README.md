@@ -2,7 +2,7 @@
 
 A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost/), based on [Attila](https://github.com/zutrinken/attila).
 
-## Screenshots
+## 📷 Screenshots
 
 <table>
 <tr>
@@ -15,21 +15,17 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 </tr>
 </table>
 
-## Features
+## ⭐️ Features
 
 * Responsive layout
-* Search
+* Dark Mode – In `style.scss`, replace `prefers-color-scheme: no-preference` with `prefers-color-scheme: dark`
+* Search & Tag archive
 * Post reading progress
 * Disqus support
 * Code highlight support – [Prism.js](https://prismjs.com/) v1.19.0
 * LaTeX support – [KaTeX](https://katex.org/) v0.11.1
-* Dark Mode – In `style.scss`, replace `prefers-color-scheme: no-preference` with `prefers-color-scheme: dark`
 
-## Backlog
-
-* Dark Mode toggling
-
-## Localization
+## 🌍 Localization
 
 * __English__
 * __German__
@@ -46,8 +42,11 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 * __Czech__ by [lunakv](https://github.com/lunakv)
 * __Portuguese__ by [matheusvanzan](https://github.com/matheusvanzan)
 * __Vietnamese__ by [JustHmmmm](https://github.com/justhmmmm)
+* __Greek__ by [thiodordelis](https://github.com/thiodordelis)
+* __Danish__ by [jmayntzhusen](https://github.com/jmayntzhusen)
+* __Arabic__ by [pop-eax](https://github.com/pop-eax)
 
-## Setup custom color
+## 🎨 Setup custom color
 
 1. Go to __Code injection__.  
 2. Add this to __Blog Header__:  
@@ -60,7 +59,24 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 </style>
 ````
 
-## Setup [Disqus](https://disqus.com/)
+## 🔠 Setup custom google fonts
+
+1. Go to [fonts.google.com](https://fonts.google.com/) and choose a font.
+2. Choose __Embed__ and copy the `<link>` code.
+3. Go to __Code injection__.  
+4. Add this to __Blog Header__:  
+````
+<link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-primary: 'Mukta', sans-serif;
+    --font-secondary: 'Crimson Text', serif;
+  }
+</style>
+````
+
+## 💬 Setup [Disqus](https://disqus.com/)
 
 1. Go to __Code injection__.
 2. Add this to __Blog Header__:
@@ -68,7 +84,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 <script>var disqus = 'YOUR_DISQUS_SHORTNAME';</script>
 ````
 
-## Setup search
+## 🔍 Setup search
 
 The search function is build with [ghostHunter](https://github.com/jamalneufeld/ghostHunter):
 
@@ -83,7 +99,7 @@ The search function is build with [ghostHunter](https://github.com/jamalneufeld/
   var ghost_root_url = '/ghost/api/v2';
 </script>
 ````
-## Development
+## ⚙️ Development
 
 Install [Grunt](https://gruntjs.com/getting-started/):
 
@@ -101,7 +117,7 @@ The compress Grunt task packages the theme files into `dist/<theme-name>.zip`, w
 
 	grunt compress
 
-## Copyright & License
+## ⚖️ Copyright & License
 
 ### Pegasus
 Copyright (C) 2020 Christian Chomiak - Released under the [MIT License](https://github.com/christianchomiak/pegasus/blob/master/LICENSE).

@@ -13,6 +13,11 @@ $inner: calc(64rem + 8vw);
 /* ==========================================================================
    Basics
    ========================================================================== */
+:root {
+	--font-primary: 'Fira Sans', sans-serif;
+	--font-secondary: 'Fira Sans', sans-serif;
+}
+
 html {
 	font-size: 62.5%;
 	overflow-x: hidden;
@@ -32,7 +37,7 @@ html.menu-active {
 }
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-family: var(--font-primary);
 	font-size: 1em;
 	line-height: 1.5em;
 	font-weight: 400;
@@ -118,16 +123,13 @@ textarea {
 	}
 
 	p {
-		// TODO: Consider using `Georgia,Times,serif` instead.
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-		// font-family: 'Cardo', serif;
+		font-family: var(--font-secondary);
 		margin: 0 0 4rem;
 	}
 
 	ol,
 	ul {
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-		// font-family: 'Cardo', serif;
+		font-family: var(--font-secondary);
 		margin: 0 0 4rem;
 		padding-left: 2em;
 		box-sizing: border-box;
@@ -151,7 +153,7 @@ textarea {
 		line-height: 1.5em;
 		text-align: right;
 		color: $color-primary;
-		font-family: 'Fira Sans', sans-serif;
+		font-family: var(--font-primary);
 	}
 
 	ul > li:before {
@@ -190,8 +192,7 @@ textarea {
 	}
 
 	blockquote {
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-		// font-family: 'Cardo', serif;
+		font-family: var(--font-secondary);
 		margin: 0 0 4rem;
 		padding: 0.25em 1em;
 		-moz-box-sizing: border-box;
@@ -233,8 +234,7 @@ textarea {
 	}
 
 	dl {
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-		// font-family: 'Cardo', serif;
+		font-family: var(--font-secondary);
 		margin: 0 0 4rem;
 		padding-left: 30px;
 	}
@@ -854,8 +854,7 @@ textarea {
 }
 
 .blog-description {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	// font-family: 'Cardo', serif;
+	font-family: var(--font-secondary);
 	display: block;
 	margin-top: 1rem;
 	padding: 0;
@@ -925,8 +924,7 @@ textarea {
 		font-size: 2em;
 		line-height: 1.5em;
 		margin: 1rem 0;
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-		// font-family: 'Cardo', serif;
+		font-family: var(--font-secondary);
 		color: $color-text-secondary;
 		@media (prefers-color-scheme: no-preference) {
 			color: $color-text-secondary-dark;
@@ -984,6 +982,13 @@ textarea {
 	}
 
 	&.archive-tag {}
+
+	.archive-taglist {
+		display: block;
+		margin: 2rem 0 1rem;
+		max-width: none;
+		float: none;
+	}
 }
 
 .has-cover {
@@ -1057,6 +1062,10 @@ textarea {
 		}
 	}
 
+	#topics {
+		margin-top: calc(4rem + 8vw);
+	}
+
 	#results {
 		padding-bottom: calc(12rem + 8vw);
 	}
@@ -1074,14 +1083,14 @@ textarea {
 }
 
 .search {
-	padding: 2rem 0;
-	display: flex;
+	position: relative;
+	margin: 2rem 0;
 
 	input[type="text"] {
 		font-size: 2em;
 		width: 100%;
 		height: 5rem;
-		margin: -0.5rem 0;
+		margin: 0;
 		padding: 0 2rem;
 		border-radius: 5rem;
 		border: 1px solid $color-border;
@@ -1101,10 +1110,22 @@ textarea {
 	}
 
 	input[type="submit"] {
-		appeareance: none;
-		background: none;
+		font-size: 1.6em;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 4rem;
+		margin: 0.5rem;
+		padding: 0 1.5rem;
 		border: 0;
-		display: none;
+		border-radius: 10rem;
+		color: #FFF;
+		background: $color-primary;
+
+		&:focus,
+		&:hover {
+			background-color: $color-primary-active;
+		}
 	}
 }
 
@@ -1376,7 +1397,7 @@ textarea {
 	a {
 		display: block;
 		padding: 1rem 0;
-		font-size: 1.5em;
+		font-size: 1.6em;
 		line-height: 2rem;
 		color: $color-text-secondary;
 		white-space: nowrap;
@@ -1550,7 +1571,7 @@ textarea {
 
 	a {
 		display: block;
-		font-size: 1.5em;
+		font-size: 1.6em;
 		line-height: 2rem;
 		color: $color-text-secondary;
 		white-space: nowrap;
@@ -1578,7 +1599,7 @@ textarea {
 .nav-copy {
 	display: block;
 	width: 100%;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	line-height: 2rem;
 	color: $color-text-secondary;
 	@media (prefers-color-scheme: no-preference) {
@@ -1592,7 +1613,7 @@ textarea {
 .nav-credits {
 	flex-shrink: 0;
 	display: block;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	line-height: 2rem;
 	color: $color-text-secondary;
 	@media (prefers-color-scheme: no-preference) {
@@ -1621,7 +1642,7 @@ textarea {
 		}
 	}
 
-	#results .post .post-box {
+	#results .post:first-child .post-box {
 		border-top: 1px solid $color-border;
 		@media (prefers-color-scheme: no-preference) {
 			border-color: $color-border-dark;
@@ -1875,8 +1896,7 @@ textarea {
 
 .post-excerpt {
 	margin: 1em 0 0;
-	//font-family: 'Cardo', serif;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-family: var(--font-secondary);
 	font-size: 2em; // Consider changing it to 1.6em
 	line-height: 1.5em;
 }
@@ -1917,7 +1937,7 @@ textarea {
 
 .post-info-label {
 	margin-right: 0.75em;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	line-height: 3rem;
 	font-weight: 400;
 	color: $color-text-secondary;
@@ -1944,7 +1964,7 @@ textarea {
 	height: 3rem;
 	margin-right: 0.5em;
 	padding: 0;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	line-height: 3rem;
 	text-align: center;
 	text-decoration: none;
@@ -2013,7 +2033,7 @@ textarea {
 	margin-bottom: 0.5em;
 	padding: 0 1.5rem;
 	background: $color-primary;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	font-weight: 500;
 	line-height: 3rem;
 	text-align: center;
@@ -2060,7 +2080,7 @@ textarea {
 	padding: 0 2rem;
 	border: 1px solid $color-neutral-80;
 	font-weight: 500;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	line-height: 4rem;
 	color: $color-text-secondary;
 	text-align: center;
@@ -2292,8 +2312,7 @@ textarea {
 .post-nav-excerpt {
 	height: 5rem;
 	margin: 0 0 1rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	// font-family: 'Cardo', serif;
+	font-family: var(--font-secondary);
 	font-size: 1.75em;
 	line-height: 2.5rem;
 	display: -webkit-box;
@@ -2305,7 +2324,7 @@ textarea {
 
 .post-nav-meta {
 	margin: 0;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	line-height: 2rem;
 	color: $color-text-secondary;
 	@media (prefers-color-scheme: dark) {
@@ -2339,7 +2358,7 @@ textarea {
 	padding: 0 2rem;
 	z-index: 100;
 	border: 1px solid $color-neutral-80;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	line-height: 4rem;
 	font-weight: 500;
 	text-align: center;
@@ -2398,7 +2417,7 @@ textarea {
 .pagination .pagination-info {
 	position: absolute;
 	width: 100%;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	line-height: 4rem;
 	height: 4rem;
 	left: 0;
