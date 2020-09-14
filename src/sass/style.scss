@@ -16,6 +16,7 @@ $inner: calc(64rem + 8vw);
 :root {
 	--font-primary: 'Fira Sans', sans-serif;
 	--font-secondary: 'Fira Sans', sans-serif;
+	//--font-secondary: 'Libre Baskerville', serif;
 }
 
 html {
@@ -39,7 +40,7 @@ html.menu-active {
 body {
 	font-family: var(--font-primary);
 	font-size: 1em;
-	line-height: 1.5em;
+	line-height: 1.75em;
 	font-weight: 400;
 	color: $color-text-primary;
 	text-rendering: optimizeLegibility;
@@ -61,6 +62,9 @@ textarea {
 }
 
 .post-content {
+	font-size: 1.75em;
+	line-height: 2em;
+
 	a {
 		color: inherit;
 		text-decoration: none;
@@ -150,7 +154,7 @@ textarea {
 		margin-left: -2em;
 		font-size: 1em;
 		font-weight: 500;
-		line-height: 1.5em;
+		line-height: 2em;
 		text-align: right;
 		color: $color-primary;
 		font-family: var(--font-primary);
@@ -410,6 +414,124 @@ textarea {
 
 	.fluid-width-video-wrapper {
 		margin: 0 0 4rem;
+	}
+
+	form {
+
+		p {
+			margin: 0 0 2rem;
+		}
+
+		fieldset {
+				border: 0;
+				margin: 0;
+				padding: 0;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 0.5rem;
+			font-family: var(--font-primary);
+			font-weight: 500;
+			color: $color-text-primary;
+			@media (prefers-color-scheme: dark) {
+				color: $color-text-primary-dark;
+			}
+		}
+
+		select,
+		textarea,
+		input[type="url"],
+		input[type="tel"],
+		input[type="text"],
+		input[type="email"],
+		input[type="month"],
+		input[type="number"],
+		input[type="search"],
+		input[type="password"] {
+			width: 100% !important;
+			height: auto !important;
+			padding: 1rem !important;
+			box-sizing: border-box;
+			transition: all ease-out 0.1s;
+			outline: none;
+			box-shadow: none;
+			-webkit-appearance: normal;
+			appearance: normal;
+			color: $color-text-primary;
+			border: 1px solid $color-border;
+			background: $color-background;
+			@media (prefers-color-scheme: dark) {
+				color: $color-text-primary-dark;
+				border-color: $color-border-dark;
+				background: $color-background-dark;
+			}
+		}
+
+		select:hover,
+		textarea:hover,
+		input[type="url"]:hover,
+		input[type="tel"]:hover,
+		input[type="text"]:hover,
+		input[type="email"]:hover,
+		input[type="month"]:hover,
+		input[type="number"]:hover,
+		input[type="search"]:hover,
+		input[type="password"]:hover {
+			border-color: $color-neutral-80;
+			@media (prefers-color-scheme: dark) {
+				border-color: $color-neutral-60;
+			}
+		}
+
+		select:focus,
+		textarea:focus,
+		input[type="url"]:focus,
+		input[type="tel"]:focus,
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="month"]:focus,
+		input[type="number"]:focus,
+		input[type="search"]:focus,
+		input[type="password"]:focus {
+			border-color: $color-primary;
+			@media (prefers-color-scheme: dark) {
+				border-color: $color-primary;
+			}
+		}
+
+		input[type="reset"],
+		input[type="submit"],
+		input[type="button"],
+		button {
+			display: block;
+			width: 100%;
+			padding: 1rem;
+			border: 0;
+			box-sizing: border-box;
+			-webkit-appearance: normal;
+			appearance: normal;
+			transition: all ease-out 0.1s;
+			background: $color-primary;
+			font-weight: 600;
+			color: #FFF;
+			text-decoration: none;
+			text-align: center;
+		}
+
+		input[type="reset"]:hover,
+		input[type="submit"]:hover,
+		input[type="button"]:hover,
+		button:hover {
+			background: $color-primary-active;
+		}
+
+		input[type="reset"]:focus,
+		input[type="submit"]:focus,
+		input[type="button"]:focus,
+		button:focus {
+			background: $color-primary-active;
+		}
 	}
 }
 /* ==========================================================================
@@ -1905,8 +2027,6 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 2rem;
-	line-height: 3rem;
 }
 
 .post-content > * {
@@ -2313,7 +2433,7 @@ textarea {
 	height: 5rem;
 	margin: 0 0 1rem;
 	font-family: var(--font-secondary);
-	font-size: 1.75em;
+	font-size: 1.5em;
 	line-height: 2.5rem;
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
