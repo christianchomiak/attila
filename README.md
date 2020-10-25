@@ -18,12 +18,19 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 ## ⭐️ Features
 
 * Responsive layout
-* Dark Mode – In `style.scss`, replace `prefers-color-scheme: no-preference` with `prefers-color-scheme: dark`
+* Dark Mode
 * Search & Tag archive
 * Post reading progress
 * Disqus support
 * Code highlight support – [Prism.js](https://prismjs.com/) v1.21.0
 * LaTeX support – [KaTeX](https://katex.org/) v0.12.0
+
+## 🕶 About **Dark Mode**
+
+In `style.scss`:
+  * To make it up to the browser, use `dark` in all `prefers-color-scheme`. This is the default behaviour.
+  * To disable it, use `no-preference` in all `prefers-color-scheme`.
+  * To enforce it, extract all properties within `@media (prefers-color-scheme: ...)`.
 
 ## 🌍 Localization
 
