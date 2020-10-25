@@ -48,6 +48,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 * __Catalan__ by [arthurnoerve](https://github.com/arthurnoerve)
 * __Lithuanian__ by [arthurnoerve](https://github.com/arthurnoerve)
 * __Dutch__ by [gkdp](https://github.com/gkdp)
+* __Polish__ by [filipolszewski](https://github.com/filipolszewski)
 
 ## 🎨 Setup custom color
 
