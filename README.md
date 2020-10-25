@@ -111,7 +111,7 @@ Install [Grunt](https://gruntjs.com/getting-started/):
 
 Install Grunt dependencies:
 
-	npm install
+	npm install [-g npm@latest]
 
 Build Grunt project:
 
