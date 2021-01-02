@@ -19,7 +19,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 
 * Responsive layout
 * Dark Mode
-* Search & Tag archive
+* Search & Popular Tags
 * Post reading progress
 * Disqus support
 * Code highlight support – [Prism.js](https://prismjs.com/) v1.22.0
@@ -56,6 +56,7 @@ In `style.scss`:
 * __Lithuanian__ by [arthurnoerve](https://github.com/arthurnoerve)
 * __Dutch__ by [gkdp](https://github.com/gkdp)
 * __Polish__ by [filipolszewski](https://github.com/filipolszewski)
+* __Esperanto__ by [ebanDev](https://github.com/ebanDev)
 
 ## 🎨 Setup custom color
 
@@ -97,17 +98,14 @@ In `style.scss`:
 
 ## 🔍 Setup search
 
-The search function is build with [ghostHunter](https://github.com/jamalneufeld/ghostHunter):
-
 1. Go to __Integrations__.  
-2. Choose __Add custom integration__, name it `ghostHunter` and choose __Create__. Copy the generated Content API Key.  
+2. Choose __Add custom integration__, name it `Search` and choose __Create__. Copy the generated Content API Key.  
 3. Go to __Code injection__.  
-4. Add this to __Blog Header__:  
+4. Add this to __Site Header__:  
 ````
 <script>
-  var ghosthunter_key = 'PASTE_THE_GENERATED_KEY_HERE';
-  //optional: set your custom ghost_root url, default is "/ghost/api/v2"
-  var ghost_root_url = '/ghost/api/v2';
+  var gh_search_key = 'API_KEY';
+  var gh_search_migration = 'v2';
 </script>
 ````
 ## ⚙️ Development
@@ -131,7 +129,7 @@ The compress Grunt task packages the theme files into `dist/<theme-name>.zip`, w
 ## ⚖️ Copyright & License
 
 ### Pegasus
-Copyright (C) 2020 Christian Chomiak - Released under the [MIT License](https://github.com/christianchomiak/pegasus/blob/master/LICENSE).
+Copyright (C) 2020-2021 Christian Chomiak - Released under the [MIT License](https://github.com/christianchomiak/pegasus/blob/master/LICENSE).
 
 ### Attila
 Copyright (C) 2015-2020 Peter Amende - Released under the [MIT License](https://github.com/zutrinken/attila/blob/master/LICENSE).
