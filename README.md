@@ -22,7 +22,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 * Search & Popular Tags
 * Post reading progress
 * Disqus support
-* Code highlight support – [Prism.js](https://prismjs.com/) v1.22.0
+* Code highlight support – [Prism.js](https://prismjs.com/) v1.23.0
 * LaTeX support – [KaTeX](https://katex.org/) v0.12.0
 
 ## 🕶 About **Dark Mode**
