@@ -1,41 +1,44 @@
-// TODO: Remove this and replace the values below with #values.
-@function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1) {
-  @if $b-hsb == 0 {
-    @return hsla(0, 0, 0, $a)
-  } @else {
-    $l-hsl: ($b-hsb/2) * (2 - ($s-hsb/100));
-    $s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2);
-    @return hsla($h-hsb, $s-hsl, $l-hsl, $a);
+:root {
+  --color-primary: #3ea9dd;
+  --color-primary-active: #3ea9dd;
+
+  --color-background-main: #FFF;
+  --color-background-secondary: #F7F8FA;
+  --color-background-contrast: #E1E3E6;
+  --color-background-overlay: rgba(37,40,43,0.9);
+  --color-content-lead: #454545; // Titles
+  --color-content-main: #454545; // Bodies
+  --color-content-secondary: #73777d;
+  
+  --color-selection: #88c9ec;
+}
+
+.theme-dark:root {
+    --color-primary: #d93645;
+    --color-primary-active: #d93645;
+
+  --color-background-main: #222426;
+  --color-background-secondary: #1D1F20;
+  --color-background-contrast: #3B3D40;
+  --color-background-overlay: rgba(9,10,13,0.9);
+  --color-content-lead: #FFF;
+  --color-content-main: #E1E3E6;
+  --color-content-secondary: #909499;
+  --color-selection: #d93645;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not(.theme-light):root {
+    --color-primary: #d93645;
+    --color-primary-active: #d93645;
+
+    --color-background-main: #222426;
+    --color-background-secondary: #1D1F20;
+    --color-background-contrast: #3B3D40;
+    --color-background-overlay: rgba(9,10,13,0.9);
+    --color-content-lead: #FFF;
+    --color-content-main: #E1E3E6;
+    --color-content-secondary: #909499;
+    --color-selection: #d93645;
   }
 }
-
-:root {
-  --color-primary: #D95736;
-  --color-primary-active: #BF4526;
-}
-$color-primary: var(--color-primary);
-$color-primary-active: var(--color-primary-active);
-
-$color-neutral-98: hsb(215, 1, 98);
-$color-neutral-90: hsb(215, 2, 90);
-$color-neutral-80: hsb(215, 4, 80); // nav, menu, pagination - button border
-$color-neutral-60: hsb(215, 6, 60); // nav, menu, pagination - button font
-$color-neutral-25: hsb(215, 8, 25);
-$color-neutral-15: hsb(215, 10, 15);
-$color-yellow-100: #ffc336;
-$color-social-twitter: #3ea9dd;
-$color-social-facebook: #3c5a98;
-$color-social-linkedin: #0e76a8;
-$color-social-mail: #2997ee;
-$color-primary: #3ea9dd; //hsb(12, 78, 88);
-$color-primary-active: #3ea9dd; // hsb(10, 84, 82);
-$color-text-primary: hsl(0, 0%, 27%); //$color-neutral-15;
-$color-text-primary-dark: $color-neutral-90;
-$color-text-secondary: hsb(215, 8, 49); // special value for accessibility
-$color-text-secondary-dark: $color-neutral-60;
-$color-border: $color-neutral-90;
-$color-background: $color-neutral-98;
-$color-border-dark: $color-neutral-25;
-$color-background-dark: $color-neutral-15;
-$color-selection: #cbeafb;
-$color-selection-dark: #ffc3366b;

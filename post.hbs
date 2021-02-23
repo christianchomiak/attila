@@ -1,4 +1,5 @@
-{{!< default}} {{#post}} <div class="progress-container">
+{{!< default}} {{!-- Everything inside the #post tags pulls data from the post --}} {{#post}} <div
+	class="progress-container">
 	<span class="progress-bar"></span>
 	</div>
 
@@ -83,7 +84,11 @@
 
 				</section>
 
+				{{!-- Links to Previous/Next posts --}}
 				<aside class="post-nav">
+
+					{{!-- If there's a next post, display it using the same markup included from -
+					partials/post-card.hbs --}}
 					{{#next_post}}
 					<a class="post-nav-next" href="{{url}}">
 						<section class="post-nav-teaser">
@@ -95,6 +100,9 @@
 						</section>
 					</a>
 					{{/next_post}}
+
+					{{!-- If there's a previous post, display it using the same markup included from -
+					partials/post-card.hbs --}}
 					{{#prev_post}}
 					<a class="post-nav-prev" href="{{url}}">
 						<section class="post-nav-teaser">
@@ -152,29 +160,6 @@
 			// Responsive videos with fitVids
 			post.fitVids();
 
-			// Format code blocks and add line numbers
-			/*function codestyling() {
-				$('pre code').each(function (i, e) {
-					// Code highlight
-					hljs.highlightBlock(e);
-					// No lines for plain text blocks
-					if (!$(this).hasClass('language-text')) {
-						var code = $(this);
-						// Calculate amount of lines
-						var lines = code.html().split(/\n(?!$)/g).length;
-						var numbers = [];
-						if (lines > 1) {
-							lines++;
-						}
-						for (i = 1; i < lines; i++) {
-							numbers += '<span class="line" aria-hidden="true">' + i + '</span>';
-						}
-						code.parent().append('<div class="lines">' + numbers + '</div>');
-					}
-				});
-			}
-			codestyling();*/
-
 			// Reading progress bar on window top
 			function readingProgress() {
 				var postBottom = post.offset().top + post.height();
@@ -216,15 +201,6 @@
 					(d.head || d.body).appendChild(s);
 				})();
 			}
-			/*$('#show-disqus').on('click', function () {
-				$.ajax({
-					type: "GET",
-					url: "//" + disqus + ".disqus.com/embed.js",
-					dataType: "script",
-					cache: true
-				});
-				$(this).parent().addClass('activated');
-			});*/
 		});
 	</script>
 

@@ -2,18 +2,35 @@
 <html lang="{{@site.lang}}">
 
 <head>
+
+	{{!-- Document Settings --}}
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
+	{{!-- Base Meta --}}
 	<title>{{meta_title}}</title>
-
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+	{{!-- Styles'n'Scripts --}}
 	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
 
 	<script>
-			var siteUrl = '{{@site.url}}';
+		var siteUrl = '{{@site.url}}';
+	</script>
+
+	<script>
+		var localTheme = localStorage.getItem('attila_theme');
+		switch (localTheme) {
+			case 'dark':
+				document.documentElement.classList.add('theme-dark');
+				break;
+			case 'light':
+				document.documentElement.classList.add('theme-light');
+				break;
+			default:
+				break;
+		}
 	</script>
 
 	{{ghost_head}}
@@ -22,35 +39,25 @@
 <body class="{{body_class}}">
 
 	<div class="nav-header">
-		<nav class="nav-wrapper" aria-label="{{t "Main"}}">
-				{{#if @site.logo}}
-				<span class="logo">
-					<a href="{{@site.url}}" title="{{t "Home"}}"><img src="{{@site.logo}}" alt="{{t "Logo"}}" /></a>
-				</span>
-				{{/if}}
-				{{navigation}}
-				<ul class="nav-side">
-					{{#if @site.twitter}}
-					<li class="nav-twitter"><a aria-label="Twitter" href="{{twitter_url}}" title="{{@site.twitter}}" target="_blank"><i class="icon icon-twitter" aria-hidden="true"></i></a></li>
-					{{/if}}
-					{{#if @site.facebook}}
-					<li class="nav-facebook"><a aria-label="Facebook" href="{{facebook_url}}" title="{{@site.facebook}}" target="_blank"><i class="icon icon-facebook" aria-hidden="true"></i></a></li>
-					{{/if}}
-					{{#if @labs.subscribers}}
-					<li class="nav-subscribe"><a title="{{t "Subscribe"}}" href="{{@site.url}}/subscribe/" target="_blank"><i class="icon icon-mail" aria-hidden="true"></i></a></li>
-					{{/if}}
-					<li class="nav-search" style="display: none;"><a title="{{t "Search"}}"><i class="icon icon-search" aria-hidden="true"></i></a></li>
-				</ul>
+		<nav class="nav-wrapper" aria-label="{{t " Main"}}">
+			{{#if @site.logo}}
+			<span class="logo">
+				<a href="{{@site.url}}" title="{{t " Home"}}"><img src="{{@site.logo}}" alt="{{t " Logo"}}" /></a>
+			</span>
+			{{/if}}
+			{{navigation}}
+			{{> "navigation-meta"}}
 		</nav>
 
 		<div class="nav-wrapper-control">
 			<div class="inner">
 				<a class="nav-menu" role="button"><i class="icon icon-menu" aria-hidden="true"></i>{{t "Menu"}}</a>
-				<a class="nav-search" style="display: none;" title="{{t "Search"}}" role="button"><i class="icon icon-search" aria-hidden="true"></i></a>
+				<a class="nav-search" style="display: none;" title="{{t " Search"}}" role="button"><i
+						class="icon icon-search" aria-hidden="true"></i></a>
 			</div>
 		</div>
 	</div>
-	<div class="nav-close" role="button" aria-label="{{t "Close"}}"></div>
+	<div class="nav-close" role="button" aria-label="{{t " Close"}}"></div>
 
 	<section class="page-wrapper">
 
@@ -59,35 +66,40 @@
 
 		<div class="search-wrapper">
 			<div class="search">
-		    <form class="search-form">
-          <input class="search-field" type="text" placeholder="{{t "Search"}} …">
-          <button class="search-button" type="submit">
+				<form class="search-form">
+					<input class="search-field" type="text" placeholder="{{t " Search"}} …">
+					<button class="search-button" type="submit">
 						<i class="icon icon-search" aria-hidden="true"></i>
 					</button>
-		    </form>
+				</form>
 				<div class="popular-wrapper">
 					<h4 class="popular-title">{{t "Topics"}}</h4>
 					<span class="popular-tags post-tags">
 						{{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
-							{{#foreach tags}}
-								<a href='{{ url }}'>{{ name }}: {{ count.posts }}</a>
-							{{/foreach}}
+						{{#foreach tags}}
+						<a href='{{ url }}'>{{ name }}: {{ count.posts }}</a>
+						{{/foreach}}
 						{{/get}}
 					</span>
 				</div>
 				<div class="search-result"></div>
 			</div>
-			<button class="search-wrapper-close" aria-label="{{t "Close"}}"></button>
+			<button class="search-wrapper-close" aria-label="{{t " Close"}}"></button>
 		</div>
 
 		<div class="nav-footer">
-			<nav class="nav-wrapper" aria-label="{{t "Footer"}}">
-				<span class="nav-copy">{{@site.title}} &copy; {{date format='YYYY'}}  <a class="nav-rss" title="RSS" href="{{@site.url}}/rss/" target="_blank"><i class="icon icon-rss" aria-hidden="true"></i></a></span>
+			<nav class="nav-wrapper" aria-label="{{t " Footer"}}">
+				<span class="nav-copy">{{@site.title}} &copy; {{date format='YYYY'}} <a class="nav-rss" title="RSS"
+						href="{{@site.url}}/rss/" target="_blank"><i class="icon icon-rss"
+							aria-hidden="true"></i></a></span>
 				{{#if @site.secondary_navigation}}
 				{{navigation type="secondary"}}
 				{{/if}}
-				<span class="nav-credits">{{t "Proudly published with"}} <a href="https://ghost.org">Ghost</a> &bull;
-					{{t "Theme" }} <a href="https://github.com/christianchomiak/pegasus">Pegasus</a></span>
+				<span class="nav-credits">{{t "Published with"}} <a href="https://ghost.org">Ghost</a> &bull; {{t
+					"Theme" }} <a href="https://github.com/christianchomiak/pegasus">Pegasus</a> &bull; <a
+						class="menu-item js-theme" href="#" data-system="System theme" data-dark="Dark theme"
+						data-light="Light theme"><span class="theme-icon"></span><span class="theme-text">System
+							theme</span> </a> </span>
 			</nav>
 		</div>
 
@@ -96,9 +108,13 @@
 	{{!-- Load basic scripts --}}
 	<script type="text/javascript" src="{{asset "js/script.js"}}"></script>
 
-	{{!-- Load scripts from other template files --}}
+	{{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some
+	JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already
+	loaded. --}}
 	{{{block "scripts"}}}
 
+	{{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the
+	closing body tag --}}
 	{{ghost_foot}}
 
 </body>

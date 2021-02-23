@@ -2,7 +2,7 @@
   "name": "pegasus",
   "description": "Ghost Theme",
   "demo": "",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
@@ -14,7 +14,7 @@
   },
   "author": {
     "name": "Christian Chomiak",
-    "email": "christianchomiak@gmail.com",
+    "email": "",
     "url": "https://nomanslambda.com"
   },
   "gpm": {
