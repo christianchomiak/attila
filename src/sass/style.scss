@@ -78,7 +78,7 @@ textarea {
 	h5,
 	h6 {
 		line-height: 1.25em;
-		margin: 0 0 4rem;
+		margin: 2rem 0 1rem;
 		text-rendering: optimizeLegibility;
 		color: var(--color-content-lead);
 	}
@@ -118,13 +118,13 @@ textarea {
 
 	p {
 		font-family: var(--font-secondary);
-		margin: 0 0 4rem;
+		margin: 1rem 0 1rem;
 	}
 
 	ol,
 	ul {
 		font-family: var(--font-secondary);
-		margin: 0 0 4rem;
+		margin: 0 0 0;
 		padding-left: 2em;
 		box-sizing: border-box;
 	}
@@ -176,7 +176,7 @@ textarea {
 	hr {
 		display: block;
 		height: 1px;
-		margin: 0 0 4rem;
+		margin: 2rem 0 2rem;
 		padding: 0;
 		background: var(--color-background-contrast);
 		border: 0;
@@ -184,7 +184,7 @@ textarea {
 
 	blockquote {
 		font-family: var(--font-secondary);
-		margin: 0 0 4rem;
+		margin: 2rem 0 2rem;
 		padding: 0.25em 1em;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
@@ -262,8 +262,8 @@ textarea {
 		margin: 0 1px;
 		padding: 4px 8px;
 		font-family: monospace, sans-serif;
-		font-weight: bold;
-		font-size: 0.75em;
+		font-weight: normal;
+		font-size: 0.85em;
 		background: var(--color-background-secondary);
 		border: 1px solid var(--color-background-contrast);
 		top: -2px;
@@ -310,14 +310,11 @@ textarea {
 		display: block;
 		position: static;
 		top: auto;
-		margin: -1.33334em -1.33334em -1.33334em 1.33334em;
-		padding: 1.33334em;
-		overflow-x: auto;
-		font-size: 0.75em;
-		line-height: 2em;
+		line-height: 1.5em;
 		white-space: pre;
 		background: transparent;
 		border: none;
+		padding: 0;
 		vertical-align: inherit;
 	}
 
@@ -645,7 +642,7 @@ textarea {
 	// KG Bookmark
 	.kg-bookmark-card {
 		width: 100%;
-		margin: 0 0 4rem;
+		margin: 0 0 2rem;
 	}
 
 	.kg-bookmark-container {
@@ -2038,6 +2035,10 @@ textarea {
 		text-decoration: none;
 		color: inherit;
 		font-weight: inherit;
+		
+		&:hover {
+			color: var(--color-primary);
+		}
 	}
 }
 
@@ -2173,7 +2174,7 @@ textarea {
    Post Info
    ========================================================================== */
 .post-footer {
-	margin: 6rem 0 6rem;
+	margin: 4rem 0 4rem;
 
 	&:after {
 		clear: both;

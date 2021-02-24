@@ -278,23 +278,23 @@ jQuery(function($) {
 
     function system() {
       html.removeClass(['theme-dark', 'theme-light']);
-      localStorage.removeItem('attila_theme');
+      localStorage.removeItem('pegasus_theme');
       toggleText.text(toggle.attr('data-system'));
     }
 
     function dark() {
       html.removeClass('theme-light').addClass('theme-dark');
-      localStorage.setItem('attila_theme', 'dark');
+      localStorage.setItem('pegasus_theme', 'dark');
       toggleText.text(toggle.attr('data-dark'));
     }
 
     function light() {
       html.removeClass('theme-dark').addClass('theme-light');
-      localStorage.setItem('attila_theme', 'light');
+      localStorage.setItem('pegasus_theme', 'light');
       toggleText.text(toggle.attr('data-light'));
     }
 
-    switch (localStorage.getItem('attila_theme')) {
+    switch (localStorage.getItem('pegasus_theme')) {
       case 'dark':
         dark();
       break;
