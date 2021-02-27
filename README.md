@@ -34,7 +34,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 | :--: | :--: | :------: | :----: | :--------: |
 | `en` | 🇬🇧 | English | 🟩 | |
 | `de` | 🇩🇪 | German | 🟩 | |
-| `es` | 🇪🇸 | Spanish | 🟧 | |
+| `es` | 🇪🇸 | Spanish | 🟩 | [r1p](https://github.com/r1p) |
 | `fr` | 🇫🇷 | French | 🟧 | [robink](https://github.com/robink) |
 | `it` | 🇮🇹 | Italian | 🟧 | [fmaida](https://github.com/fmaida) |
 | `no` | 🇳🇴 | Norwegian | 🟧 | [arthurnoerve](https://github.com/arthurnoerve), [oisann](https://github.com/oisann) |
@@ -55,6 +55,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 | `nl` | 🇳🇱 | Dutch | 🟧 | [gkdp](https://github.com/gkdp) |
 | `pl` | 🇵🇱 | Polish | 🟧 | [filipolszewski](https://github.com/filipolszewski) |
 | `eo` | | Esperanto | 🟧 | [ebanDev](https://github.com/ebanDev) |
+| `ga` | | Galego | 🟩 | [r1p](https://github.com/r1p) |
 
 ## 🎨 Setup custom color
 
