@@ -24,7 +24,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 * Disqus support
 * Member menu buttons
 * Code highlight support – [Prism.js](https://prismjs.com/) v1.23.0
-* LaTeX support – [KaTeX](https://katex.org/) v0.12.0
+* LaTeX support – [KaTeX](https://katex.org/) v0.13.0
 
 ## 🌍 Localization
 
