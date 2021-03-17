@@ -1,7 +1,4 @@
 :root {
-  --color-primary: #3ea9dd;
-  --color-primary-active: #3ea9dd;
-
   --color-background-main: #FFF;
   --color-background-secondary: #F7F8FA;
   --color-background-contrast: #E1E3E6;
@@ -14,9 +11,6 @@
 }
 
 .theme-dark:root {
-  --color-primary: #3ea9dd;
-  --color-primary-active: #3ea9dd;
-
   --color-background-main: #222426;
   --color-background-secondary: #1D1F20;
   --color-background-contrast: #3B3D40;
@@ -29,9 +23,6 @@
 
 @media (prefers-color-scheme: dark) {
   html:not(.theme-light):root {
-    --color-primary: #3ea9dd;
-    --color-primary-active: #3ea9dd;
-
     --color-background-main: #222426;
     --color-background-secondary: #1D1F20;
     --color-background-contrast: #3B3D40;

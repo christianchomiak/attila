@@ -23,6 +23,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 * Post reading progress
 * Disqus support
 * Member menu buttons
+* Ghost accent color
 * Code highlight support – [Prism.js](https://prismjs.com/) v1.23.0
 * LaTeX support – [KaTeX](https://katex.org/) v0.13.0
 
@@ -56,19 +57,6 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 | `pl` | 🇵🇱 | Polish | 🟧 | [filipolszewski](https://github.com/filipolszewski) |
 | `eo` | | Esperanto | 🟧 | [ebanDev](https://github.com/ebanDev) |
 | `ga` | | Galego | 🟩 | [r1p](https://github.com/r1p) |
-
-## 🎨 Setup custom color
-
-1. Go to __Code injection__.  
-2. Add this to __Blog Header__:  
-````
-<style>
-  :root {
-    --color-primary: #D95736;
-    --color-primary-active: #BF4526;
-  }
-</style>
-````
 
 ## 🔠 Setup custom google fonts
 
