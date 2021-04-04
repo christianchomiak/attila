@@ -58,13 +58,18 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 | `eo` | | Esperanto | 🟧 | [ebanDev](https://github.com/ebanDev) |
 | `ga` | | Galego | 🟩 | [r1p](https://github.com/r1p) |
 
+## Show subscribe / account button in navigation
+
+1. Go to `partials/navigation-meta.hbs`.
+2. Remove comments on line `24`and `34`.
+
 ## 🔠 Setup custom google fonts
 
 1. Go to [fonts.google.com](https://fonts.google.com/) and choose a font.
 2. Choose __Embed__ and copy the `<link>` code.
 3. Go to __Code injection__.  
 4. Add this to __Blog Header__:  
-````
+````html
 <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 <style>
@@ -79,7 +84,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 
 1. Go to __Code injection__.
 2. Add this to __Blog Header__:
-````
+````html
 <script>var disqus = 'YOUR_DISQUS_SHORTNAME';</script>
 ````
 
@@ -89,7 +94,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 2. Choose __Add custom integration__, name it `Search` and choose __Create__. Copy the generated Content API Key.  
 3. Go to __Code injection__.  
 4. Add this to __Site Header__:  
-````
+````html
 <script>
   var gh_search_key = 'API_KEY';
   var gh_search_migration = 'v2';
@@ -98,21 +103,21 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 ## ⚙️ Development
 
 Install [Grunt](https://gruntjs.com/getting-started/):
-
-	npm install -g grunt-cli
-
+````bash
+npm install -g grunt-cli
+````
 Install Grunt dependencies:
-
-	npm install [-g npm@latest]
-
+````bash
+npm install [-g npm@latest]
+````
 Build Grunt project:
-
-	grunt build
-
+````bash
+grunt build
+````
 The compress Grunt task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
-
-	grunt compress
-
+````bash
+grunt compress
+````
 ## ⚖️ Copyright & License
 
 ### Pegasus
