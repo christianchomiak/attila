@@ -9,14 +9,14 @@
 $breakpoint-large: 960px;
 $breakpoint-medium: 640px;
 $breakpoint-small: 480px;
-$inner: calc(64rem + 8vw);
+$inner: calc(72rem + 8vw);
 /* ==========================================================================
    Basics
    ========================================================================== */
 :root {
 	--font-primary: 'Fira Sans', sans-serif;
 	--font-secondary: 'Fira Sans', sans-serif;
-	//--font-secondary: 'Libre Baskerville', serif;
+	--font-code: 'JetBrains Mono', 'Roboto Mono', monospace;
 }
 
 html {
@@ -55,19 +55,29 @@ textarea {
 }
 
 .post-content {
-	font-size: 2em;
+	font-size: 2.1em;
 	line-height: 1.75em;
 
 	a {
 		color: inherit;
 		text-decoration: none;
-		font-weight: 400;
+		font-weight: bold;
 		box-shadow: inset 0 -2px 0 var(--ghost-accent-color);
 		transition: all ease-out 0.1s;
+		
+		@media (prefers-color-scheme: dark) {
+			color: var(--ghost-accent-color);
+			box-shadow: none;
+		}
 
 		&:focus,
 		&:hover {
+			color: var(--color-content-lead);
 			box-shadow: inset 0 -3px 0 var(--ghost-accent-color);
+
+			@media (prefers-color-scheme: dark) {
+				color: var(--color-content-lead);
+			}
 		}
 	}
 
@@ -78,7 +88,7 @@ textarea {
 	h5,
 	h6 {
 		line-height: 1.25em;
-		margin: 2rem 0 1rem;
+		margin: 4rem 0 2rem;
 		text-rendering: optimizeLegibility;
 		color: var(--color-content-lead);
 	}
@@ -91,19 +101,25 @@ textarea {
 	h2 {
 		font-size: 3rem;
 		text-indent: -1px;
+		border-bottom: 4px solid;
 	}
 
 	h3 {
 		font-size: 2.4rem;
+		border-bottom: 2px dashed;
 	}
 
 	h4 {
 		font-size: 2rem;
+		font-weight: 700;
+		text-decoration: underline;
 	}
 
 	h5,
 	h6 {
-		font-size: 2rem;
+		font-size: 1.85rem;
+		font-weight: inherit;
+		text-decoration: underline;
 		font-weight: 500;
 	}
 
@@ -156,8 +172,8 @@ textarea {
 	}
 
 	ul > li:before {
-		margin-top: -1px;
-		content: '—' !important;
+		margin-top: -4px;
+		content: '—' !important; // TODO: Add support for custom contents via a var (e.g. '●')
 	}
 
 	ol > li:before {
@@ -175,7 +191,7 @@ textarea {
 
 	hr {
 		display: block;
-		height: 1px;
+		height: 2px;
 		margin: 2rem 0 2rem;
 		padding: 0;
 		background: var(--color-background-contrast);
@@ -261,7 +277,7 @@ textarea {
 		position: relative;
 		margin: 0 1px;
 		padding: 4px 8px;
-		font-family: monospace, sans-serif;
+		font-family: var(--font-code), monospace, sans-serif;
 		font-weight: normal;
 		font-size: 0.85em;
 		background: var(--color-background-secondary);
@@ -275,7 +291,7 @@ textarea {
 		margin: 0 0 4rem;
 		padding: 1em;
 		overflow: hidden;
-		font-family: monospace, sans-serif;
+		font-family: var(--font-code), monospace, sans-serif;
 		white-space: pre;
 		background: var(--color-background-secondary);
 		border: 1px solid var(--color-background-contrast);
@@ -496,7 +512,7 @@ textarea {
 		margin: auto;
 		font-size: 0.75em;
 		line-height: 2em;
-		padding: 2rem 0;
+		padding: 1rem 0;
 
 		&:after {
 			content: '';
@@ -639,7 +655,7 @@ textarea {
 	}
 
 	.kg-code-card pre {
-		margin: 0;
+		margin: 1em 0 0 0;
 	}
 	// KG Bookmark
 	.kg-bookmark-card {
@@ -878,7 +894,7 @@ textarea {
 	margin: 0;
 	padding: 0;
 	font-weight: 700;
-	font-size: 6em;
+	font-size: 7em;
 	line-height: 1em;
 	text-decoration: none;
 	color: var(--color-content-lead);
@@ -1234,7 +1250,7 @@ textarea {
 
 		.search-result-row-link {
 			display: block;
-			padding: 2rem;
+			padding: 2rem 4rem;
 			color: inherit;
 			text-decoration: none;
 			transition: all ease-out 0.05s;
@@ -1255,10 +1271,10 @@ textarea {
 			.search-result-row-excerpt {
 				margin: 0.5rem 0 0;
 				font-family: var(--font-secondary);
-				font-size: 1.25em;
-				line-height: 2em;
+				font-size: 1.75em;
+				line-height: 1.75em;
 				display: -webkit-box;
-				-webkit-line-clamp: 2;
+				-webkit-line-clamp: 3;
 				-webkit-box-orient: vertical;
 				overflow: hidden;
 				text-overflow: ellipsis;
@@ -1483,15 +1499,15 @@ textarea {
 		}
 
 		a {
-			color: var(--color-content-main);
+			color: var(--color-content-lead);
 			font-weight: 500;
+			font-size: 2em;
 
 			@media only screen and (max-width: $breakpoint-medium) {
 				color: white;
 			}
 		}
 	}
-
 
 	&.nav-subscribe,
 	&.nac-account {
@@ -1534,13 +1550,13 @@ textarea {
 	a {
 		display: block;
 		padding: 1rem 0;
-		font-size: 1.6em;
+		font-size: 2em;
 		line-height: 2rem;
 		color: var(--color-content-secondary);
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		text-decoration: none;
-		font-weight: 400;
+		font-weight: 500;
 		cursor: pointer;
 		transition: color linear 0.1s;
 
@@ -1564,7 +1580,9 @@ textarea {
 
 		&:focus,
 		&:hover {
-			color: var(--color-content-main);
+			color: var(--color-content-lead);
+
+			box-shadow: inset 0 -3px 0 var(--ghost-accent-color);
 
 			@media only screen and (max-width: $breakpoint-medium) {
 				color: #C4C7CC;
@@ -1701,7 +1719,7 @@ textarea {
 .nav-footer {
 	position: relative;
 	z-index: 20;
-	padding-top: calc(3rem + 8vw);
+	padding-top: calc(3rem + 4vw);
 	padding-bottom: 4rem;
 	margin-top: auto;
 
@@ -1859,6 +1877,18 @@ textarea {
 			}
 		}
 	}
+	.post-content {
+		a {
+			color: var(--ghost-accent-color);
+			box-shadow: none;
+
+			&:focus,
+			&:hover {
+				color: var(--color-content-lead);
+				box-shadow: inset 0 -3px 0 var(--ghost-accent-color);
+			}
+		}
+	}
 }
 
 .theme-light {
@@ -1875,10 +1905,24 @@ textarea {
 		border-radius: 2rem;
 		background: #FF3;
 	}
-		.nav-header .logo {
+
+	.nav-header .logo {
 		a {
 			img {
 				filter: invert(0);
+			}
+		}
+	}
+
+	.post-content {
+		a {
+			color: inherit;
+			box-shadow: inset 0 -2px 0 var(--ghost-accent-color);
+
+			&:focus,
+			&:hover {
+				color: var(--color-content-lead);
+				box-shadow: inset 0 -3px 0 var(--ghost-accent-color);
 			}
 		}
 	}
@@ -1894,8 +1938,8 @@ textarea {
 
 	.post .post-box {
 		text-align: center;
-		padding-top: calc(1rem + 2vw);
-		padding-bottom: calc(1rem + 2vw);
+		padding-top: calc(1rem + 1vw);
+		padding-bottom: calc(1rem + 1vw);
 		border-bottom: 1px solid var(--color-background-contrast);
 	}
 
@@ -2039,13 +2083,14 @@ textarea {
 		
 		&:hover {
 			color: var(--color-primary);
+			box-shadow: inset 0 -3px 0 var(--ghost-accent-color);
 		}
 	}
 }
 
 .post-header .post-title {
 	margin: 0 0 2rem;
-	font-size: 6em;
+	font-size: 5em;
 	line-height: 1.25em;
 }
 
@@ -2058,15 +2103,21 @@ textarea {
 	font-size: 1.75rem;
 	line-height: 2rem;
 	color: var(--color-content-secondary);
+	font-family: var(--font-secondary);
 
 	a {
 		display: inline-block;
 		text-decoration: none;
-		color: inherit;
+		color: var(--color-content-main);
+		background-color: var(--color-background-contrast);
+		border-radius: 4px;
+		padding: 2px 8px;
+		font-weight: bold;
 
 		&:focus,
 		&:hover {
-			text-decoration: underline;
+			color: var(--color-background-main);
+			background-color: var(--ghost-accent-color);
 		}
 	}
 }
@@ -2087,8 +2138,8 @@ textarea {
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		width: 8rem;
-		height: 1px;
+		width: 100%;
+		height: 2px;
 		background: var(--color-background-contrast);
 	}
 
@@ -2614,3 +2665,5 @@ textarea {
 		border-bottom: 1px solid var(--color-background-contrast);
 	}
 }
+
+@import "code";

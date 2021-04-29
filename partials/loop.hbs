@@ -12,7 +12,7 @@
 				<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time> &bull;
 				{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
 				{{#if tags}}
-				&bull; <span class="post-meta">{{tags}}</span>
+				&bull; <span class="post-meta">{{tags separator=" "}}</span>
 				{{/if}}
 			</div>
 			<!--{{primary_tag.name}}-->

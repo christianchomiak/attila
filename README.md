@@ -76,6 +76,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
   :root {
     --font-primary: 'Mukta', sans-serif;
     --font-secondary: 'Crimson Text', serif;
+    --font-code: 'Roboto Mono', monospace;
   }
 </style>
 ````
