@@ -272,6 +272,10 @@ textarea {
 		background-color: #FFC336;
 	}
 
+	mark strong {
+		color: black !important;
+	}
+
 	code,
 	tt {
 		position: relative;
@@ -1829,7 +1833,7 @@ textarea {
 	a {
 		color: inherit;
 		text-decoration: none;
-		font-weight: 500;
+		font-weight: bold;
 	}
 }
 
@@ -2112,7 +2116,7 @@ textarea {
 		background-color: var(--color-background-contrast);
 		border-radius: 4px;
 		padding: 2px 8px;
-		font-weight: bold;
+		margin: 2px 0;
 
 		&:focus,
 		&:hover {
@@ -2664,6 +2668,12 @@ textarea {
 	.pagination-box {
 		border-bottom: 1px solid var(--color-background-contrast);
 	}
+}
+
+.katex-display {
+	overflow-x: overlay;
+	overflow-y: hidden;
+	font-size: 1.9rem;
 }
 
 @import "code";
