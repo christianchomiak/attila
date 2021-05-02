@@ -2673,7 +2673,27 @@ textarea {
 .katex-display {
 	overflow-x: overlay;
 	overflow-y: hidden;
-	font-size: 1.9rem;
+	font-size: 2rem;
+}
+
+/* Scrollbar Width */
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Scrollbar Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
 
 @import "code";
