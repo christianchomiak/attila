@@ -17,22 +17,6 @@
 				Last updated <time datetime="{{date format='DD-MM-YYYY'}}">{{date updated_at timeago="true"}}</time> &bull;
 				{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
 			</div>
-			<!--<div class="post-meta">
-			<div class="post-meta-avatars">
-				{{#foreach authors}}
-				<figure class="post-meta-avatar avatar">
-					{{#if profile_image}}
-					<a href="{{url}}" class="author-avatar">
-						<img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
-					</a>
-					{{/if}}
-				</figure>
-				{{/foreach}}
-			</div>
-			<h4 class="post-meta-author">{{authors separator=", "}}</h4>
-			<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time> &bull;
-			{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
-		</div>-->
 			{{#if feature_image}}
 			<div class="post-cover cover">
 				<img srcset="{{img_url feature_image size=" s"}} 320w, {{img_url feature_image size="m" }} 640w,
@@ -155,22 +139,22 @@
 	</script>
 
 	{{!-- Support for LaTeX, using KaTeX --}}
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.4/dist/katex.min.css"
-		integrity="sha384-7aDBmYbVPgx+EhQWBDVbtj58cCdOhcBwGSuF7wbt2EQ5T85OzOCYLZD2+cV7NxG+" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.6/dist/katex.min.css"
+		integrity="sha384-81hI3kRV62VEhJBKVz7JsJzaUcP5Ty/E1FFdkLh6yz8uWthgdssaWCD1j8R1r2iU" crossorigin="anonymous">
 
 	{{!-- The loading of KaTeX is deferred to speed up page rendering --}}
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.4/dist/katex.min.js"
-		integrity="sha384-beM1KrUvr2muZ8JxnfljMb3dYIbsNZC397DWMR2G1z++rzblzujCqOETl/x00dNI"
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.6/dist/katex.min.js"
+		integrity="sha384-8swauRFcjK634lyiWVXOA0GdycMCzfbC+6qXGQroVKYve7SFHawYjryBtaLve4xl"
 		crossorigin="anonymous"></script>
 
 	{{!-- To automatically render math in text elements, include the auto-render extension: --}}
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.4/dist/contrib/auto-render.min.js"
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.6/dist/contrib/auto-render.min.js"
 		integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
 		onload="renderMathInElement(document.body);"></script>
 
 	{{!-- Add support to easily copy the LaTeX notation --}}
-	<link href="https://cdn.jsdelivr.net/npm/katex@0.13.4/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css">
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.4/dist/contrib/copy-tex.min.js"
+	<link href="https://cdn.jsdelivr.net/npm/katex@0.13.6/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.6/dist/contrib/copy-tex.min.js"
 		integrity="sha384-Ep9Es0VCjVn9dFeaN2uQxgGcGmG+pfZ4eBaHxUpxXDORrrVACZVOpywyzvFRGbmv"
 		crossorigin="anonymous"></script>
 
