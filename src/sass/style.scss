@@ -981,17 +981,20 @@ textarea {
 		margin-top: 1rem;
 
 		a {
-			color: var(--ghost-accent-color);
-			transition: color linear 0.1s;
 
 			span {
 				display: none;
 			}
+		}
+	}
 
-			&:focus,
-			&:hover {
-				opacity: 0.92;
-			}
+	a {
+		color: var(--ghost-accent-color);
+		transition: color linear 0.1s;
+
+		&:focus,
+		&:hover {
+			opacity: 0.92;
 		}
 	}
 
@@ -1048,7 +1051,7 @@ textarea {
 			color: rgba(255,255,255,0.8);
 		}
 
-		.archive-links a {
+		a {
 			color: rgba(255,255,255,0.8);
 
 			&:focus,
