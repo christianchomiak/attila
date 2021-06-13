@@ -63,7 +63,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 1. Go to `partials/navigation-meta.hbs`.
 2. Remove comments on line `24`and `34`.
 
-## 🔠 Setup custom google fonts
+## 🔠 Setup custom Google fonts
 
 1. Go to [fonts.google.com](https://fonts.google.com/) and choose a font.
 2. Choose __Embed__ and copy the `<link>` code.
