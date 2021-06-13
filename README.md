@@ -2,7 +2,7 @@
 
 A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost/), based on [Attila](https://github.com/zutrinken/attila).
 
-## 📷 Screenshots
+## 📷 Screenshot
 
 <table>
 <tr>
@@ -79,6 +79,16 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
     --font-code: 'Roboto Mono', monospace;
   }
 </style>
+````
+## 🌓 Force Light/Dark Mode
+
+1. Go to __Code injection__.  
+2. Decide for `light` or `dark`.
+3. Add this to __Blog Header__:
+
+````html
+<script>localStorage.setItem('attila_theme', 'dark');</script>
+<style>.js-theme {display:none!important;}</style>
 ````
 
 ## 💬 Setup [Disqus](https://disqus.com/)
