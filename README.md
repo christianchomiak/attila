@@ -88,7 +88,7 @@ A content focused responsive theme for [Ghost](https://github.com/tryghost/ghost
 3. Add this to __Blog Header__:
 
 ````html
-<script>localStorage.setItem('attila_theme', 'dark');</script>
+<script>localStorage.setItem('pegasus_theme', 'dark');</script>
 <style>.js-theme {display:none!important;}</style>
 ````
 
